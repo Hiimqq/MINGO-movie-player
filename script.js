@@ -11,7 +11,13 @@ const fullscreenBtn = document.querySelector('.fullscreen');
 
 // Play & Pause ----------------------------------- //
 
-
+function togglePlay() {
+    if (video.paused) {
+        video.play();
+    } else {
+        video.pause();
+    }
+}
 
 // Progress Bar ---------------------------------- //
 
@@ -28,3 +34,6 @@ const fullscreenBtn = document.querySelector('.fullscreen');
 // Fullscreen ------------------------------- //
 
 
+// Event listeners
+playBtn.addEventListener('click', togglePlay);
+video.addEventListener('click', togglePlay);
