@@ -45,10 +45,10 @@ function displayTime(time) {
 }
 
 // Update progressBar as video plays
-
 function updateProgress() {
     progressBar.style.width = `${(video.currentTime / video.duration) * 100}%`;
-    displayTime(85400); // in seconds: day is 86400 | hour is 3600 | minute is 60 //
+    currentTime.textContent = `${displayTime(video.currentTime)} /`;
+    duration.textContent = `${displayTime(video.duration)}`;
 }
 
 // Volume Controls --------------------------- //
