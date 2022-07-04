@@ -33,10 +33,22 @@ video.addEventListener('ended', showPlayIcon);
 
 // Progress Bar ---------------------------------- //
 
+// Calculate displayTime format //
+function displayTime(time) {
+    let hours = Math.floor(time / 3600);
+    let minutes = Math.floor((time % 3600) / 60);
+    let seconds = Math.floor(time % 60);
+    seconds = seconds > 9 ? seconds : `0${seconds}`;
+    minutes = minutes > 9 ? minutes : `0${minutes}`;
+    console.log(`${hours}:${minutes}:${seconds}`);
+    return `${hours}:${minutes}:${seconds}`;
+}
+
 // Update progressBar as video plays
 
 function updateProgress() {
     progressBar.style.width = `${(video.currentTime / video.duration) * 100}%`;
+    displayTime(85400); // in seconds: day is 86400 | hour is 3600 | minute is 60 //
 }
 
 // Volume Controls --------------------------- //
