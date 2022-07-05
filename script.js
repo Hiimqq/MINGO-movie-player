@@ -108,8 +108,7 @@ function toggleMute() {
 // Change Playback Speed -------------------- //
 
 function changeSpeed() {
-    console.log('video playback speed', video.playbackRate);
-    console.log('selected value', speed.value);
+    video.playbackRate = speed.value;
 }
 
 // Fullscreen ------------------------------- //
